@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/yogie-wisesa/dptk/issues"
   },
-  "homepage": "https://github.com/yogie-wisesa/dptk#readme"
+  "homepage": "https://github.com/yogie-wisesa/dptk#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+  }
 }

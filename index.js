@@ -7,11 +7,11 @@ var path = require('path')
 
 var app = express();
 var server = http.createServer(app);
-var socket = io.listen(server);
 
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
-// app.use(express.static(path.join(__dirname, 'public')));
+app.set('views', __dirname);
+app.use(express.static(path.join(__dirname)));
 app.get('/', function(req, res){
     res.render('index');
 });
