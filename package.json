@@ -1,0 +1,20 @@
+{
+  "name": "data-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yogie-wisesa/dptk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yogie-wisesa/dptk/issues"
+  },
+  "homepage": "https://github.com/yogie-wisesa/dptk#readme"
+}
