@@ -1,9 +1,19 @@
-const http = require('http')
-const fs = require('fs')
+var io   = require('socket.io'),
+    url  = require('url'),
+    sys  = require('sys'),
+    express = require('express'),
+    http=require('http');
+var path = require('path')
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'content-type': 'text/html' })
-  fs.createReadStream('index.html').pipe(res)
-})
+var app = express();
+var server = http.createServer(app);
+var socket = io.listen(server);
 
-server.listen(process.env.PORT || 3000)
+app.engine('.html', require('ejs').__express);
+app.set('view engine', 'html');
+// app.use(express.static(path.join(__dirname, 'public')));
+app.get('/', function(req, res){
+    res.render('index');
+});
+
+app.listen(4000);
